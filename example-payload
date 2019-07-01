@@ -1,0 +1,17 @@
+[root@unknowne4beed876c29 gcloud]# ./pubsub-subcribe.py 
+projects/pubsubdemo-245111/topics/trydemo
+projects/pubsubdemo-245111/subscriptions/trydemo-subscription
+name: "projects/pubsubdemo-245111/subscriptions/trydemo-subscription"
+topic: "projects/pubsubdemo-245111/topics/trydemo"
+push_config {
+}
+ack_deadline_seconds: 10
+message_retention_duration {
+  seconds: 604800
+}
+expiration_policy {
+  ttl {
+    seconds: 2678400
+  }
+}
+
