@@ -1,0 +1,6 @@
+[root@unknowne4beed876c29 gcloud]# gcloud pubsub subscriptions pull --auto-ack trydemo-subscription
+┌───────┬─────────────────┬────────────┐
+│  DATA │    MESSAGE_ID   │ ATTRIBUTES │
+├───────┼─────────────────┼────────────┤
+│ hello │ 602756176218346 │            │
+└───────┴─────────────────┴────────────┘
