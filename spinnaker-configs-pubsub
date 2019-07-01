@@ -1,0 +1,10 @@
+spinnaker-1:~/spinnaker-pubsub$ export SERVICE_ACCOUNT_DEST=/home/ppatel/spinnaker-pubsub/pubsubdemo-245111-e9ebfef237f7.json 
+spinnaker-1:~/spinnaker-pubsub$ echo $SERVICE_ACCOUNT_DEST 
+/home/ppatel/spinnaker-pubsub/pubsubdemo-245111-e9ebfef237f7.json
+spinnaker-1:~/spinnaker-pubsub$ export MESSAGE_FORMAT=CUSTOM
+spinnaker-1:~/spinnaker-pubsub$ export PROJECT=pubsubdemo
+spinnaker-1:~/spinnaker-pubsub$ export SUBSCRIPTION=trydemo-subscription
+spinnaker-1:~/spinnaker-pubsub$ export PUBSUB_NAME=trydemo
+spinnaker-1:~/spinnaker-pubsub$ hal config pubsub google enable
+
+hal config pubsub google subscription add $PUBSUB_NAME --subscription-name $SUBSCRIPTION --json-path $SERVICE_ACCOUNT_DEST --project $PROJECT --message-format $MESSAGE_FORMAT
